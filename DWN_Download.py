@@ -60,7 +60,7 @@ def download_lektion(unterricht, path_sammlung):
 
 def download_sammlung(book, dir_parent):
     url_buch = book[0]
-    buch = book[1]
+    buch = book[1].replace('?','').rstrip()
 
     response = urllib.request.urlopen(url_buch)
     data = response.read()
